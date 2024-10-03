@@ -5,6 +5,18 @@ Array tem que dizer qual o tamanho dele na criação, sem possibilidade de mudar
 
 Vetor é um array unidimensional, tendo somente 1 linha
 Para trabalhar matriz, tem que utilizar o For para travar na linha e outro For para trabalhar colunas
+
+array é uma variável composta, tendo diversas variáveis simples dentro de um tamanho determidado
+Deve atribuir um valor para a variável, dizendo o espaço onde vai ficar o valor
+para que seja um array, o tamanho tem que ser no mínimo 2
+Quando quer guardar mais de um valor do mesmo tipo
+Deve indicar o tipo de dado a ser guardado no array. Ex: float N1=[15,12,10], string N1=[15,12,10]
+Para mudar o valor em uma das posições, deve indicar a posição que se está alterando.
+Ex.: Dado o array nomes = ['jose','joao','ana'], para mudar o valor de jose então nomes[0]=isa, assim o array original fica nomes = ['isa','joao','ana']
+
+A melhor estrutura para ler o array é o For
+
+Uma lista recebe qualquer tipo de dado, porém é mais lento na execução
 '''
 
 '''arrayCompras = ['banana','laranja','maçã']
