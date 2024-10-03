@@ -1,7 +1,7 @@
 #Ler 5 nomes de usuários e suas senhas. Armazenar cada lista em um array diferente.
 # Imprimir nome, senha e posição no array.
 
-nomes = [0]*5
+nomes = [""]*5
 senhas = [0]*5
 tam = len(nomes)
 
