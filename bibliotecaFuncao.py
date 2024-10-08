@@ -23,7 +23,7 @@ def soma(*numeros):
     for i in range(tam-1,-1,-1):
         print(letras[0][i],end='')'''
 
-#outra forma de resolver
+#outra forma de resolver a função acima
 
 def texto(letras):
     qtd = 0
@@ -37,3 +37,12 @@ def texto(letras):
     for z in range (tam-1,-1,-1):
         print(letras[z], end=" ")''' #forma tradicional
 
+
+#Faça uma função que recebe uma lista como argumento e crie uma nova lista, somente com números únicos
+
+def listaUnica(a):
+    nova_lista = []
+    for x in a:
+        if x not in nova_lista:
+            nova_lista.append(x)
+    print(nova_lista)
