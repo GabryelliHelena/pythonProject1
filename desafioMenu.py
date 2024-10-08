@@ -55,7 +55,6 @@ while menu != 4:
                 else:
                     tent -= 1
                     print(f"Algo deu errado. Tente novamente. \nTentativas restantes: {tent}.\n")
-
             if tent <= 0:
                 print("Acesso bloqueado. \nVocê excedeu o número de tentativas.")
 
