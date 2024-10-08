@@ -46,3 +46,14 @@ def listaUnica(a):
         if x not in nova_lista:
             nova_lista.append(x)
     print(nova_lista)
+
+def numero_primo(numero):
+    if numero == 1:
+        print("Não é primo")
+    elif numero == 2:
+        print("É o único número par que é primo")
+    else:
+        for x in range (2, numero):
+            if (numero % x==0):
+                return numero, "não é primo"
+        return numero, "é primo"

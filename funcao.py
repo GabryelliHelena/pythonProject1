@@ -1,3 +1,4 @@
 from bibliotecaFuncao import *
-lista_a=[10,12,12,31,4,4,5,31]
-listaUnica(lista_a)
+print(numero_primo(4))
+#como o print só mostra o que tem no return, é bom guardar o resultado retornado em uma função
+resultado = numero_primo(4)
