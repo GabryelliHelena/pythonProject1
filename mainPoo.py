@@ -1,8 +1,6 @@
-from bibliotecaPoo import Gato, Cachorro, Coelho, Vaca
+from bibliotecaPoo import *
 
-gato = Gato("Pix", "cinza")
-cachorro = Cachorro("Reginaldo", "caramelo")
-coelho = Coelho("Algodão", "rosa")
-vaca = Vaca("Furiosa", "vermelho")
-
-print(gato.miar(), cachorro.latir(), coelho.chiar(), vaca.mugir())
+c1 = Corredor("Joy", 65)
+c1.aposentar()
+c1.aquecer()
+c1.correr()

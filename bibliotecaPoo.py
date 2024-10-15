@@ -58,6 +58,9 @@ class Cachorro(Animal):
     def __init__(self, nome, cor):
         super().__init__(nome, cor)
 
+    def comer(self):
+        print(f"O cachorro {self.nome} foi comer...")
+
     def latir(self):
         print(f"O {self.nome} foi latindo...")
 
@@ -74,3 +77,63 @@ class Vaca(Animal):
 
     def mugir(self):
         print(f"A {self.nome} foi mugindo...")
+
+
+
+class Atleta():
+    def __init__(self, nome, peso):
+        self.nome = nome
+        self.peso = peso
+        self.aposentado = False
+        self.aquecido = False
+
+    def aposentar(self):
+        if self.aposentado == False:
+            print(f"{self.nome} foi aposentado.")
+            self.aposentado = True
+        else:
+            print(f"{self.nome} não pode aposentar porque já está na rede!")
+
+    def aquecer(self):
+        if self.aquecido == False:
+            if self.aposentado == False:
+                print(f"{self.nome} está aquecido.")
+                self.aquecido = True
+            else:
+                print(f"{self.nome} não pode aquecer pois está aposentado.")
+        else:
+            print(f"{self.nome} não pode aquecer pois já está aquecendo.")
+
+class Corredor(Atleta):
+    def __init__(self, nome, peso):
+        super().__init__(nome, peso)
+
+    def correr(self):
+        if self.aquecido == True:
+            print(f"{self.nome} foi correr.")
+        else:
+            print(f"Não pode correr pois não aqueceu.")
+
+class Nadador(Atleta):
+    def __init__(self, nome, peso):
+        super().__init__(nome, peso)
+
+    def nadar(self):
+        if self.aquecido == True:
+            print(f"{self.nome} foi nadar.")
+        else:
+            print(f"Não pode nadar pois não aqueceu.")
+
+class Ciclista(Atleta):
+    def __init__(self, nome, peso):
+        super().__init__(nome, peso)
+
+    def nadar(self):
+        if self.aquecido == True:
+            print(f"{self.nome} foi pedalar.")
+        else:
+            print(f"Não pode pedalar pois não aqueceu.")
+
+class TriAtleta(Corredor, Nadador, Ciclista):
+    def __init__(self, nome, peso):
+        super().__init__(nome, peso)
