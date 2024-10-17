@@ -30,12 +30,14 @@ class Pessoa():
         if self.andando == False:
             if self.comendo == False:
                 if self.dormindo == False:
-                    print(f"{self.nome} foi andar.")
+                    print(f"{self.nome} começou a andar.")
                     self.andando = True
                 else:
                     print(f"{self.nome} não pode andar pois está dormindo.")
             else:
-                print()
+                print(f"{self.nome} não pode andar pois está comendo.")
+        else:
+            print(f"{self.nome} já está andando.")
 
 
 
@@ -137,3 +139,7 @@ class Ciclista(Atleta):
 class TriAtleta(Corredor, Nadador, Ciclista):
     def __init__(self, nome, peso):
         super().__init__(nome, peso)
+
+with open("teste01.txt", "a") as arq:
+    texto = input("Digite seu texto: ")
+    arq.write(f"{texto}\n")
