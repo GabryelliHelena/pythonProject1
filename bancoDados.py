@@ -17,5 +17,16 @@ Dicionário de dados: Adota a nomenclatura de dados da empresa, padronizando o n
 Modelo físico = Define o sistema de gerenciamento de dados, com base nos critérios do projeto. (Não é função do programador, é do DBA)
 DBA (Data Based Administrative) - Adm do banco de dados, especialista em um tipo de estrutura. A certificação é oferecido pelo fabricante do software, precisando fazer os testes que a empresa oferece.
 
+Chave primária identifica a entidade.
+Toda chave estrangeira é uma chave primária em sua própria entidade.
+
+PASSOS PARA TRABALHAR COM BANCO DE DADOS
+Determinar o objetivo. Será um sistema para um Restaurante? Para um Estacionamento?
+Entidades são tabelas que guardam informações diferentes, como "Clientes", "Idade", etc.
+Determinar os atributos para cada entidade. EX.: Entidade: Alunos, Atributos: Nome, idade, etc.
+Determinar o Identificador da entidade, que vai definir a chave primária. Se não tiver algum atributo que pode ser a chave primária, deve ser criado.
+EX.: No caso de alunos, seria CPF. Se não tiver CPF, pegar a matrícula. No caso de estacionamento, seria a placa.
+Determinar os relacionamentos, identificando as associações entre as entidades.
+Normalizar a estrutura de banco de dados, para que evite erros e haja padronização.
 
 '''
