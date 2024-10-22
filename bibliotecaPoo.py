@@ -140,6 +140,23 @@ class TriAtleta(Corredor, Nadador, Ciclista):
     def __init__(self, nome, peso):
         super().__init__(nome, peso)
 
-with open("teste01.txt", "a") as arq:
-    texto = input("Digite seu texto: ")
-    arq.write(f"{texto}\n")
+def cadastrar(texto):
+    with open("registro.txt", "a") as arq:
+        arq.write(f"{texto}\n")
+def mostrar():
+    with open("registro.txt", "r") as arq2:
+        leitura = arq2.read()
+        print(leitura)
+def pesquisar(texto):
+    try:
+        cont = 0
+        with open("registro.txt", "r") as arquivo:
+            for x in arquivo:
+                if texto in x:
+                    cont+=1
+                else:
+                    print("Texto não encontrado")
+        print(cont)
+    except FileNotFoundError:
+        with open("registro.txt", "a"):
+            pass
