@@ -30,3 +30,6 @@ Determinar os relacionamentos, identificando as associações entre as entidades
 Normalizar a estrutura de banco de dados, para que evite erros e haja padronização.
 
 '''
+
+import * from biblioteca
+cep = input("Qual o CEP? ")

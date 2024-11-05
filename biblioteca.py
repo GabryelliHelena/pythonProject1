@@ -1,5 +1,15 @@
-def imprimir_nome (nome):
-    print(f"O nome é: {nome} ")
-def imprimir_numeros():
-    for x in range (1,6,1):
-        print(x, end=" ")
+import requests
+
+def viaCep (cep):
+    if len(cep) == 8:
+        link = f"https://viacep.com.br/ws/{cep}/json/"
+        requisicao = requests.get(link)
+        print(requisicao)
+        dic_requisicao = requisicao.json()
+
+        uf = dic_requisicao["uf"]
+        cidade = dic_requisicao["localidade"]
+        bairro = dic_requisicao["bairro"]
+        print(dic_requisicao)
+    else:
+        print("CEP inválido")
